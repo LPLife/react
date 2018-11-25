@@ -1,0 +1,54 @@
+.orderItem {
+    display: flex;
+    flex-direction: row;
+}
+.orderItem-btn {
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    font-size: 14px;
+}
+.orderItem-btn-red {
+    background-color: red;
+}
+
+.orderItem-btn-blue {
+    background-color: #ddd;
+}
+.orderItem-pic {
+    width: 150px;
+    height: 150px;
+}
+.orderItem-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.orderItem-product,
+.orderItem-shop,
+.orderItem-price {
+    padding: 10px 10px;
+    line-height: 1;
+}
+
+.orderItem-detail button {
+    position: absolute;
+    right:4px;
+    margin-top: 128px;
+}
+.orderItem-star-light {
+    color: yellow;
+    font-size: 28px;
+}
+.orderItem-star {
+    color: #ddd;
+    font-size: 28px;
+}
+.comment {
+padding: 4px 10px; 
+}
+.orderItem-comment {
+    width: 100%;
+}
