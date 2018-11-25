@@ -4,7 +4,7 @@
         "picture": "https://img.mukewang.com/5ad5cc490001e53006000338-240-135.jpg",
         "product": "百香果",
         "price": 19.9,
-        "ifCommented": false
+        "ifCommented": true
     },
 {
     "id": 1,
@@ -12,7 +12,7 @@
     "picture": "https://img.mukewang.com/5ad5cc490001e53006000338-240-135.jpg",
     "product": "苹果",
     "price": 19.9,
-    "ifCommented": false
+    "ifCommented": true
 },
 {
     "id": 1,

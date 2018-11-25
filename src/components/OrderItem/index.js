@@ -6,7 +6,9 @@ export default class OrderItem extends Component {
     this.state = {
       eiditing:false,
       stars:props.data.stars||0,
-      comment:props.data.comment || "",
+      comment:true,
+      btnvalue:'未评价',
+      ifCommented: true
     }
   }
       rendStart() {
@@ -45,13 +47,16 @@ export default class OrderItem extends Component {
     handleCanleComment = () =>{
 this.setState({
   eiditing:false,
-      stars: this.props.data.stars || 0,
-        comment: this.props.data.comment || "",
+  stars: this.props.data.stars || 0,
+  comment: true,
+  btnvalue: '未评价',
 })
     }
-      handleComment = () => {
+    handleComment = () => {
         this.setState({
           eiditing:false,
+          btnvalue:'已评价',
+          comment: false
         })
       }
     rendEditArea() {
@@ -59,8 +64,8 @@ this.setState({
         < div className= "comment">
            <textarea className='orderItem-comment'></textarea>
            {this.rendStart()}
-           <button className="orderItem-btn-red" onClick={this.handelComment}>提交</button>
-           <button className = "orderItem-btn-blue" onClick={this.handleCanleComment}>取消 </button>
+           <button className="orderItem-btn-red" onClick={this.handleComment}>提交</button>
+           <button className = "orderItem-btn-blue" onClick={this.handleCanleComment}>取消</button>
         </div>
       )
     }
@@ -70,8 +75,9 @@ this.setState({
       product,
       price,
       picture,
-      ifCommented
     } = this.props.data;
+    let {btnvalue,comment} = this.state;
+    console.log({comment});
     return (
       <Fragment>
       <div className='orderItem'>
@@ -84,8 +90,7 @@ this.setState({
             <div className='orderItem-price'>{price}</div>
           </div>
           <div className='orderItem-detail'>
-              <button className = {
-              ifCommented === true ? 'orderItem-btn  orderItem-btn-red ' : 'orderItem-btn  orderItem-btn-blue' }  onClick={this.handleopenEditArea}> 评价 </button>
+              <button className = {comment ? 'orderItem-btn orderItem-btn-red':'orderItem-btn orderItem-btn-gray'}  onClick={this.handleopenEditArea}> {btnvalue} </button>
         </div>
        
       </div>
